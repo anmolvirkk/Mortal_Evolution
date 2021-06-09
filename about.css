@@ -1,0 +1,912 @@
+:root {
+  --main: #B8F808;
+  --secondary: #1c1c1c;
+}
+
+@font-face {
+  font-family: font;
+  src: url(font.ttf);
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 0;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background-color: black;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: var(--main);
+}
+
+::selection {
+  background: var(--main);
+  color: black;
+}
+
+/* Change Autocomplete styles in Chrome*/
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+  border: 1px solid var(--main);
+  padding: 9px;
+  -webkit-text-fill-color: white;
+  -webkit-box-shadow: 0 0 0px 1000px #050505 inset;
+  transition: background-color 5000s ease-in-out 0s;
+}
+
+*{
+    -webkit-tap-highlight-color: transparent;
+}
+
+.abcRioButtonLightBlue {
+  background-color: rgb(20, 20, 20) !important;
+  color: white !important;
+  width: 110px !important;
+  border-radius: 5px 5px !important;
+  border-right: 1px solid transparent;
+  border-left: 1px solid transparent;
+}
+
+.abcRioButtonLightBlue:hover {
+  box-shadow: none !important;
+  background-color: rgb(17, 17, 17) !important;
+  border-color: var(--main);
+}
+
+.abcRioButtonIcon {
+  padding-right: 0% !important;
+  padding-left: 15px !important;
+}
+
+.abcRioButtonContents {
+  ;
+}
+
+#mobileDevice{
+  width: 100vw;
+  height: 100vh;
+  background-color: black;
+  background: radial-gradient(circle, rgba(10,10,10,1) 0%, rgba(0,0,0,1) 100%);
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 99999 !important;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+#mobileDevice h1{
+  color: #dcdcdc;
+  font-size: 1em;
+  font-family: 'Lato';
+  font-weight: 300;
+}
+#mobileDevice lottie-player{
+  filter: hue-rotate(-45deg);
+}
+
+#landscape{
+  height: 100vh;
+  width: 100vw;
+  background-color: black;
+  background: radial-gradient(circle, rgba(10,10,10,1) 0%, rgba(0,0,0,1) 100%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 99999 !important;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+#landscape lottie-player{
+  transform: rotate(90deg);
+}
+
+html, body{
+  margin: 0;
+  padding: 0;
+  font-family: 'Lato';
+  background-color: #030303;
+  overflow: hidden;
+  scroll-behavior: smooth;
+}
+html{
+  overflow-y: auto;
+}
+header{
+  width: 100vw;
+  background-color: #090909;
+  height: 10vh;
+  z-index: 99;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+#grunge{
+  width: 100% !important;
+  height: 100% !important;
+  background-image: url('https://www.onlygfx.com/wp-content/uploads/2019/11/9-soft-grunge-texture-3-1.png');
+  background-repeat: repeat;
+  background-size: 110%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 9;
+  filter: invert(5%) !important;
+  opacity: 0.5;
+  pointer-events: none;
+  border: none;
+  outline: none;
+}
+
+#googleBtn {
+  position: absolute;
+  right: 25px;
+}
+#mLogo{
+  padding-left: 25px;
+}
+#mLogo h1 {
+  font-size: 1.8em;
+  color: var(--main);
+  margin: 0;
+  font-family: 'font';
+}
+#mLogo h2 {
+  margin: 0;
+  margin-left: 5px;
+  font-size: 0.35em;
+  color: white;
+  letter-spacing: 0.4em;
+  word-spacing: 0.5em;
+  text-transform: uppercase;
+  margin-top: 0px;
+}
+
+#home{
+    height: 90vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#hero{
+  position: absolute;
+  height: 80%;
+  z-index: 1;
+  right: 25%;
+  filter: contrast(120%);
+}
+#plastic{
+  position: absolute;
+  right: 0;
+  top: 0;
+  height: 100%;
+  width: 20%;
+  object-fit: cover;
+  filter: contrast(110%);
+}
+#wrapper{
+    position: absolute;
+    z-index: 3;
+    height: 50%;
+    object-fit: cover;
+    mix-blend-mode: hard-light;
+    filter: brightness(85%);
+    pointer-events: none;
+}
+.main{
+  position: absolute;
+  top: 100px;
+  left: 35px;
+  z-index: 10;
+}
+.main h1{
+  font-size: 3em;
+  color: white;
+  text-transform: uppercase;
+  white-space: nowrap;
+  margin: 0;
+}
+.main p{
+  white-space: nowrap;
+  line-height: 0.6em;
+  margin: 0;
+  font-size: 3em;
+  text-shadow:
+   -0.5px -0.5px 0 var(--main),
+    0.5px -0.5px 0 var(--main),
+    -0.5px 0.5px 0 var(--main),
+     0.5px 0.5px 0 var(--main);
+  color: #030303;
+  text-transform: uppercase;
+}
+.main h2{
+  font-size: 1em;
+  color: rgb(195, 195, 195);
+  width: 60%;
+  line-height: 1.7em;
+  font-family: 'Josefin Sans';
+  font-weight: 300;
+  margin-top: 35px;
+}
+.main h2 span{
+  font-family: 'font';
+  color: var(--main);
+  margin-right: 5px;
+}
+.buttons{
+  display: flex;
+  margin-top: 35px;
+}
+.start{
+  position: static !important;
+}
+.buttons button:nth-child(2){
+  text-transform: capitalize;
+  color: #777777;
+  margin-left: 15px;
+}
+.buttons button:nth-child(2):hover{
+  color: #999999;
+}
+.buttons button{
+  text-transform: uppercase;
+  font-size: 0.7em;
+  transition: 0.2s;
+  font-family: 'Josefin Sans';
+  border: none;
+  outline: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.decor{
+  position: absolute;
+  bottom: 10px;
+  right: 35px;
+  z-index: 2;
+}
+.decor h2{
+  margin: 0;
+  font-size: 6.5vw;
+  color: white;
+  font-family: 'font';
+  white-space: nowrap;
+}
+.decor span{
+  color: var(--main);
+}
+
+
+#ribbon{
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+}
+#ribbon h1{
+  position: absolute;
+  top: 25vh;
+  z-index: 0;
+  letter-spacing: 1px;
+  word-spacing: 5px;
+  white-space: nowrap;
+  width: 120%;
+  left: -10%;
+  box-sizing: border-box;
+  padding-top: 11px;
+  padding-bottom: 9px;
+  background-color: var(--main);
+  color: black;
+  text-align: center;
+  text-transform: uppercase;
+  font-family: 'Josefin Sans';
+  transform: rotate(5deg);
+}
+#ribbon h1:nth-child(2){
+  transform: rotate(-20deg);
+}
+
+
+#motive{
+  color: white;
+  z-index: 1;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: column;
+  height: 100%;
+  width: 100%;
+  margin-top: -40vh;
+}
+#motive img{
+  height: 500px;
+  width: 400px;
+  object-fit: cover;
+  position: absolute;
+  z-index: 2;
+  filter: contrast(120%);
+}
+#motive p{
+z-index: 1;
+  position: absolute;
+  margin: 0;
+  text-transform: uppercase;
+  font-size: 1.7em;
+  word-spacing: 10px;
+  margin-bottom: -30%;
+  margin-left: -50%;
+  color: var(--main);
+  font-weight: bolder;
+}
+#motive p::first-line{
+  color: white;
+}
+#motive h2{
+z-index: 2;
+  position: absolute;
+  right: 70px;
+  top: 30px;
+  font-size: 2em;
+  font-family: 'font';
+  line-height: 1.3em;
+}
+#motive span{
+  color: var(--main);
+  font-size: 0.7em;
+}
+#motive #paper{
+  width: 100%;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  z-index: 0;
+  filter: invert(97%);
+  transform: scaleX(-1);
+}
+
+#motive #plastic2{
+  position: absolute;
+  z-index: 1;
+  width: 400px;
+  height: 400px;
+  right: 15%;
+  bottom: -35%;
+}
+
+#learn{
+  width: 100%;
+  height: 100vh;
+  color: white;
+  position: relative;
+}
+#learn h1{
+  position: absolute;
+  z-index: 1;
+  bottom: -30%;
+  left: -3%;
+  font-size: 14vw;
+  white-space: nowrap;
+  text-shadow:
+   -0.5px -0.5px 0 var(--main),
+    0.5px -0.5px 0 var(--main),
+    -0.5px 0.5px 0 var(--main),
+     0.5px 0.5px 0 var(--main);
+  color: #030303;
+  text-transform: uppercase;
+}
+#paper2{
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 0;
+    filter: invert(97%);
+    z-index: 0;
+    transform: scaleX(-1) rotate(180deg);
+}
+#works{
+  padding-top: 50px;
+  width: 100%;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+#works h1{
+  font-family: 'font';
+  font-size: 2.5em;
+  color: white;
+  margin-left: 45px;
+  border-left: 5px solid var(--main);
+  padding-left: 30px;
+  align-self: flex-start;
+}
+
+.mock{
+  width: 70%;
+  margin-top: 10px;
+  z-index: 10;
+  margin-bottom: 50px;
+}
+
+#works article{
+  color: white;
+  align-self: flex-start;
+  margin-left: 50px;
+  z-index: 10;
+  width: 70%;
+}
+#works article h2{
+  border-bottom: 1px solid var(--main);
+  padding-bottom: 5px;
+  word-spacing: 5px;
+  text-transform: uppercase;
+  white-space: nowrap;
+  letter-spacing: 3px;
+}
+#works article span{
+  border-bottom: 10px solid #030303;
+  color: var(--main);
+  font-size: 3em;
+  font-weight: 200;
+  padding-right: 20px;
+}
+#works li{
+  list-style: none;
+  line-height: 1.7em;
+  width: 100%;
+  margin-bottom: 15px;
+  position: relative;
+  margin-left: 40px;
+}
+#works li::before {
+  content: "\2022";  /* Add content: \2022 is the CSS Code/unicode for a bullet */
+  color: var(--main); /* Change the color */
+  font-weight: bold; /* If you want it to be bold */
+  display: inline-block; /* Needed to add space between the bullet and the text */
+  width: 1em; /* Also needed for space (tweak if needed) */
+  margin-left: -2em; /* Also needed for space (tweak if needed) */
+    position: absolute;
+    height: 100%;
+}
+#final{
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  position: relative;
+  padding-top: 100px;
+}
+#final h1{
+z-index: 10;
+  font-size: 9vw;
+  font-family: 'Josefin Sans';
+  text-transform: uppercase;
+  margin: 0;
+  margin-left: -1px;
+  text-shadow:
+   -0.5px -0.5px 0 #dcdcdc,
+    0.5px -0.5px 0 #dcdcdc,
+    -0.5px 0.5px 0 #dcdcdc,
+     0.5px 0.5px 0 #dcdcdc;
+  color: #030303;
+  position: absolute;
+  top: 50px;
+}
+#final h2{
+z-index: 15;
+  font-size: 3em;
+  font-family: 'font';
+  color: var(--main);
+  margin-left: -230px;
+  margin-top: 150px;
+}
+.start2{
+margin-left: 300px;
+  position: static !important;
+  z-index: 20;
+}
+#final #wrapper{
+  width: 40%;
+  height: 40%;
+  right: 15%;
+  bottom: 13%;
+  z-index: 12;
+}
+#finalImg{
+  position: absolute;
+  height: 60%;
+  right: 100px;
+  z-index: 11;
+  filter: contrast(130%);
+  bottom: 25px;
+}
+#paper3{
+    width: 100%;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    z-index: 0;
+    filter: invert(97%);
+    z-index: 0;
+    transform: scaleX(-1);
+    z-index: 0;
+}
+#final article{
+  position: absolute;
+  z-index: 10;
+  right: 0;
+  top: 27%;
+}
+#final article::first-line{
+  color: #dcdcdc;
+  text-shadow:
+   -0.5px -0.5px 0 #dcdcdc,
+    0.5px -0.5px 0 #dcdcdc,
+    -0.5px 0.5px 0 #dcdcdc,
+     0.5px 0.5px 0 #dcdcdc;
+}
+#final p{
+  text-transform: uppercase;
+  margin: 0;
+  line-height: 0.5;
+  font-size: 2.1em;
+  text-shadow:
+   -0.5px -0.5px 0 var(--main),
+    0.5px -0.5px 0 var(--main),
+    -0.5px 0.5px 0 var(--main),
+     0.5px 0.5px 0 var(--main);
+  color: #030303;
+}
+#final #plastic2{
+    position: absolute;
+    z-index: 1;
+    width: 450px;
+    filter: contrast(130%);
+    height: 350px;
+    object-fit: cover;
+    left: 0;
+    bottom: 0;
+}
+
+
+@media only screen and (max-width: 730px) {
+#mLogo{
+  padding-left: 3vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: column;
+}
+  #mLogo h1 {
+    font-size: 4vh;
+  }
+
+  #mLogo h2 {
+    margin-left: 0;
+    font-size: 0.9vh;
+    letter-spacing: 0.3vh;
+    word-spacing: 0.5vh;
+  }
+
+  .abcRioButtonLightBlue {
+    width: 100px !important;
+    border-radius: 0 !important;
+  }
+
+  .abcRioButtonIcon {
+    padding-right: 0% !important;
+    padding-left: 15px !important;
+  }
+
+  #googleBtn {
+    right: 10px;
+  }
+  #home{
+      height: 90vh;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+  }
+  #home #grunge{
+    height: 120% !important;
+  }
+  #hero{
+    right: auto;
+    top: 15vh;
+    height: 65%;
+    filter: contrast(130%) brightness(70%);
+  }
+  #plastic{
+    width: 50%;
+  }
+  #wrapper{
+      height: 30%;
+      width: 85%;
+      bottom: 5%;
+  }
+  .main{
+    left: auto;
+    top: 22vh;
+    bottom: auto;
+  }
+  .main h1{
+    font-size: 2em;
+  }
+  .main p{
+    font-size: 2em;
+  }
+  .main h2{
+    width: 95%;
+    margin: 0;
+    margin-top: -30px;
+    padding: 10px;
+    padding-top: 90px;
+    padding-bottom: 100px;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+  }
+  .buttons{
+    display: flex;
+    margin-top: -30px;
+    margin-left: 10px;
+  }
+  .buttons button:nth-child(1){
+    color: white;
+  }
+  .buttons button:nth-child(2){
+    color: white;
+    border-left: 1px solid white;
+  }
+  .buttons button:nth-child(2):hover{
+    color: rgb(212, 212, 212);
+    border-color: rgb(212, 212, 212);
+  }
+
+  .decor{
+    bottom: 15px;
+    right: auto;
+  }
+  .decor h2{
+    font-size: 2.5em;
+    margin-left: 15px;
+    white-space: normal;
+  }
+  #ribbon{
+    z-index: 20;
+    overflow: visible;
+    height: auto;
+  }
+  #ribbon h1{
+    top: 5vh;
+    padding-top: 17px;
+    padding-bottom: 15px;
+    font-size: 0.65em;
+  }
+
+  #motive{
+    margin-top: 0;
+    z-index: 11;
+    height: 70%;
+    padding-top: 45%;
+  }
+  #motive img{
+    height: 70vh;
+    width: 80vw;
+    margin-top: 30%;
+  }
+  #motive p{
+    left: 0;
+    margin-left: 5%;
+    bottom: auto;
+    margin-top: 0;
+    font-size: 1em;
+    white-space: nowrap;
+    z-index: 20;
+    mix-blend-mode: color-dodge;
+  }
+  #motive h1{
+    display: none;
+  }
+  #motive h2{
+    left: 7px;
+    top: auto;
+    margin-top: -70%;
+    font-size: 2em;
+    line-height: 1.2em;
+  }
+  #motive span{
+    font-size: 0.5em !important;
+  }
+  #motive #plastic2{
+    position: absolute;
+    z-index: 1;
+    width: 50vw;
+    height: 50vw;
+    right: 10px;
+    bottom: -20%;
+  }
+  #motive #paper{
+    width: 100%;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    z-index: 0;
+    filter: invert(97%);
+    transform: scaleX(-1);
+  }
+
+  #learn{
+    height: 30vh;
+  }
+  #learn h1{
+    left: 0;
+    font-size: 13vw;
+  }
+  #works{
+    padding-top: 5%;
+  }
+  #works h1{
+    font-size: 1em;
+    margin-left: 15px;
+    padding-left: 15px;
+    margin-bottom: 15%;
+  }
+
+  .mock{
+    width: 95%;
+    z-index: 10;
+    margin-bottom: 10px;
+  }
+  .lMock{
+    margin-top: 10px;
+    margin-bottom: 100px;
+  }
+
+  #works article{
+    margin-left: 0;
+    width: 100%;
+  }
+  #works article h2{
+    padding-left: 50px;
+    position: relative;
+    white-space: normal;
+    padding-bottom: 15px;
+    font-size: 1em;
+    line-height: 1.4em;
+  }
+  #works article span{
+    position: absolute;
+    top: -10px;
+    left: 0;
+    z-index: -1;
+  }
+  #works ul{
+    padding: 0;
+    width: 85%;
+    font-size: 0.8em;
+  }
+  #works li{
+    list-style: none;
+    line-height: 1.7em;
+    width: 100%;
+    margin-bottom: 15px;
+    position: relative;
+    margin-left: 40px;
+    font-weight: 300;
+  }
+  #works li::before {
+    content: "\2022";  /* Add content: \2022 is the CSS Code/unicode for a bullet */
+    color: var(--main); /* Change the color */
+    font-weight: bold; /* If you want it to be bold */
+    display: inline-block; /* Needed to add space between the bullet and the text */
+    width: 1em; /* Also needed for space (tweak if needed) */
+    margin-left: -2em; /* Also needed for space (tweak if needed) */
+      position: absolute;
+      height: 100%;
+  }
+
+  #final{
+    padding-top: 0;
+    padding-bottom: 35px;
+    margin-top: 0;
+    height: 85vh;
+  }
+  #final article{
+    z-index: 20;
+    top: 35%;
+  }
+  #final p{
+    font-size: 1.2em;
+    line-height: 0;
+  }
+  #final h1{
+    font-size: 12vw;
+    line-height: 1.2em;
+    z-index: 20;
+    top: 0;
+  }
+  #final h2{
+    margin-left: 10px;
+    margin-top: 0;
+    position: absolute;
+    bottom: 10%;
+  }
+  .start2{
+  margin-left: auto !important;
+  align-self: center !important;
+  position: absolute !important;
+  bottom: 25px !important;
+  right: 0 !important;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  }
+  .start2 .abcRioButtonLightBlue{
+    width: 80% !important;
+    text-transform: uppercase !important;
+    height: 50px !important;
+  }
+  .start2 .abcRioButtonContents{
+    font-family: 'Josefin Sans' !important;
+    letter-spacing: 3px !important;
+    color: #dcdcdc !important;
+    line-height: 50px !important;
+  }
+  .start2 .abcRioButtonIcon{
+    padding: 15px !important;
+    padding-right: 0 !important;
+  }
+  #final #wrapper{
+    width: 90%;
+    height: 40%;
+    right: auto;
+    top: 40%;
+    z-index: 12;
+  }
+  #finalImg{
+    width: 70%;
+    height: 60%;
+    object-fit: cover;
+    right: auto;
+    top: 20%;
+  }
+  #final #plastic2{
+      width: 70%;
+      height: 30%;
+      left: 0;
+      bottom: 15%;
+  }
+
+  #grunge{
+    filter: invert(25%) !important;
+  }
+
+
+}
